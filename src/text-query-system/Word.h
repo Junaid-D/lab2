@@ -25,6 +25,7 @@ public:
 
 private:	
 	string word_;	
+    string stripPunctuation(std::string inpStr) const;
 };
 
 #endif
