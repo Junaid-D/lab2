@@ -5,15 +5,22 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\TextQueryTests.cpp" Name="FileName"/>
-      <int Value="17" Name="FirstVisibleLine"/>
-      <int Value="37" Name="CurrentLine"/>
+      <int Value="60" Name="FirstVisibleLine"/>
+      <int Value="113" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\Word.cpp" Name="FileName"/>
-      <int Value="4" Name="FirstVisibleLine"/>
-      <int Value="4" Name="CurrentLine"/>
+      <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\Line.cpp" Name="FileName"/>
+      <int Value="16" Name="FirstVisibleLine"/>
+      <int Value="27" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\Line.h" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="19" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -21,6 +28,13 @@
       <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\Word.h" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="E:\IE_3\soft\elen3009-lab2\src\text-query-system\Word.cpp" Name="FileName"/>
+      <int Value="10" Name="FirstVisibleLine"/>
+      <int Value="23" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

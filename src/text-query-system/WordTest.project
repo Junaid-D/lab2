@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="WordTest" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="TestProj" Version="10.0.0" InternalType="Console">
   <VirtualDirectory Name="text-query-system">
+    <File Name="Line.h"/>
+    <File Name="Line.cpp"/>
     <File Name="Word.h"/>
     <File Name="Word.cpp"/>
     <File Name="TextQueryTests.cpp"/>
@@ -98,4 +100,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>
