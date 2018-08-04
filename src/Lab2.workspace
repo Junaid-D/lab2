@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Lab2" Database="" Version="10.0.0">
-  <Project Name="TestProj" Path="text-query-system/WordTest.project" Active="No"/>
-  <Project Name="Factorial" Path="factorial/Factorial.project" Active="Yes"/>
+  <Project Name="TestProj" Path="text-query-system/WordTest.project" Active="Yes"/>
+  <Project Name="Factorial" Path="factorial/Factorial.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

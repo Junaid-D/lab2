@@ -62,7 +62,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) $(IntermediateDirectory)/Word.cpp$(ObjectSuffix) $(IntermediateDirectory)/Line.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/FileReader.cpp$(ObjectSuffix) $(IntermediateDirectory)/Line.cpp$(ObjectSuffix) $(IntermediateDirectory)/Word.cpp$(ObjectSuffix) $(IntermediateDirectory)/Paragraph.cpp$(ObjectSuffix) $(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,21 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix): TextQueryTests.cpp $(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/TextQueryTests.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix): TextQueryTests.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix) -MM TextQueryTests.cpp
+$(IntermediateDirectory)/FileReader.cpp$(ObjectSuffix): FileReader.cpp $(IntermediateDirectory)/FileReader.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/FileReader.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FileReader.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FileReader.cpp$(DependSuffix): FileReader.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FileReader.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/FileReader.cpp$(DependSuffix) -MM FileReader.cpp
 
-$(IntermediateDirectory)/TextQueryTests.cpp$(PreprocessSuffix): TextQueryTests.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TextQueryTests.cpp$(PreprocessSuffix) TextQueryTests.cpp
+$(IntermediateDirectory)/FileReader.cpp$(PreprocessSuffix): FileReader.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FileReader.cpp$(PreprocessSuffix) FileReader.cpp
+
+$(IntermediateDirectory)/Line.cpp$(ObjectSuffix): Line.cpp $(IntermediateDirectory)/Line.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/Line.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Line.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Line.cpp$(DependSuffix): Line.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Line.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Line.cpp$(DependSuffix) -MM Line.cpp
+
+$(IntermediateDirectory)/Line.cpp$(PreprocessSuffix): Line.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Line.cpp$(PreprocessSuffix) Line.cpp
 
 $(IntermediateDirectory)/Word.cpp$(ObjectSuffix): Word.cpp $(IntermediateDirectory)/Word.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/Word.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Word.cpp$(ObjectSuffix) $(IncludePath)
@@ -109,13 +117,21 @@ $(IntermediateDirectory)/Word.cpp$(DependSuffix): Word.cpp
 $(IntermediateDirectory)/Word.cpp$(PreprocessSuffix): Word.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Word.cpp$(PreprocessSuffix) Word.cpp
 
-$(IntermediateDirectory)/Line.cpp$(ObjectSuffix): Line.cpp $(IntermediateDirectory)/Line.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/Line.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Line.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Line.cpp$(DependSuffix): Line.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Line.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Line.cpp$(DependSuffix) -MM Line.cpp
+$(IntermediateDirectory)/Paragraph.cpp$(ObjectSuffix): Paragraph.cpp $(IntermediateDirectory)/Paragraph.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/Paragraph.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Paragraph.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Paragraph.cpp$(DependSuffix): Paragraph.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Paragraph.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Paragraph.cpp$(DependSuffix) -MM Paragraph.cpp
 
-$(IntermediateDirectory)/Line.cpp$(PreprocessSuffix): Line.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Line.cpp$(PreprocessSuffix) Line.cpp
+$(IntermediateDirectory)/Paragraph.cpp$(PreprocessSuffix): Paragraph.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Paragraph.cpp$(PreprocessSuffix) Paragraph.cpp
+
+$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix): TextQueryTests.cpp $(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/AgentX/Google Drive/2018/Semester 2/ELEN3009 Software Dev 2/Labs/lab2/src/text-query-system/TextQueryTests.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix): TextQueryTests.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TextQueryTests.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TextQueryTests.cpp$(DependSuffix) -MM TextQueryTests.cpp
+
+$(IntermediateDirectory)/TextQueryTests.cpp$(PreprocessSuffix): TextQueryTests.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/TextQueryTests.cpp$(PreprocessSuffix) TextQueryTests.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

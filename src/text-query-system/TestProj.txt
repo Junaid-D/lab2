@@ -1,1 +1,1 @@
-./Debug/TextQueryTests.cpp.o ./Debug/Word.cpp.o ./Debug/Line.cpp.o   
+./Debug/FileReader.cpp.o ./Debug/Line.cpp.o ./Debug/Word.cpp.o ./Debug/Paragraph.cpp.o ./Debug/TextQueryTests.cpp.o   

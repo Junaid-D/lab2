@@ -6,6 +6,11 @@
     </Plugin>
   </Plugins>
   <VirtualDirectory Name="text-query-system">
+    <File Name="alice.txt"/>
+    <File Name="FileReader.h"/>
+    <File Name="FileReader.cpp"/>
+    <File Name="Paragraph.h"/>
+    <File Name="Paragraph.cpp"/>
     <File Name="Line.h"/>
     <File Name="Line.cpp"/>
     <File Name="Word.h"/>

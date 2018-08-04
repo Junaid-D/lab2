@@ -115,33 +115,59 @@ TEST_CASE("Word which is not queryable cannot be found") {
 
 // ------------- Tests for Paragraph ----------------
 
-//TEST_CASE("Word cannot be found in empty Paragraph") {
-//}
-//
-//TEST_CASE("Word not present in Paragraph cannot be found") {
-//}
-//
-//TEST_CASE("Line number of a Word appearing once in Paragraph is returned") {
-//}
-//
-//TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is returned") {
-//}
-//
-//TEST_CASE("Line numbers returned account for an empty Line") {
+TEST_CASE("Word cannot be found in empty Paragraph") {
+	auto paragraph=Paragraph();
+	CHECK_FALSE(std::get<0>(paragraph.contains(Word{"Test"})));
+}
+
+TEST_CASE("Word not present in Paragraph cannot be found") {
+	auto paragraph=Paragraph();
+	auto line1 = Line{"How can you tell if a person is a programmer? They use nested parentheses in normal writing (at least I do (sometimes))."};
+	auto line2 = Line{"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."};   
+	paragraph.addLine(line1);
+	paragraph.addLine(line2);
+	CHECK_FALSE(std::get<0>(paragraph.contains(Word{"Test"})));
+}
+
+TEST_CASE("Line number of a Word appearing once in Paragraph is returned") {
+	auto paragraph=Paragraph();
+	auto line1 = Line{"How can you tell if a person is a programmer? They use nested parentheses in normal writing (at least I do (sometimes))."};
+	auto line2 = Line{"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."};   
+	paragraph.addLine(line1);
+	paragraph.addLine(line2);
+	CHECK((std::get<1>(paragraph.contains(Word{"fool"})))[0]==2);
+}
+
+TEST_CASE("Line numbers of a Word appearing in multiple Lines of a Paragraph is returned") {
+	auto paragraph=Paragraph();
+	auto line1 = Line{"How can you tell if a person is a programmer? They use nested parentheses in normal writing (at least I do (sometimes))."};
+	auto line2 = Line{"Any fool can write code that a computer can understand. A good programmer writes code that humans can understand."};   
+	paragraph.addLine(line1);
+	paragraph.addLine(line2);
+	CHECK((std::get<1>(paragraph.contains(Word{"programmer"})))==vector<int>{1,2});
+}
+
+TEST_CASE("Line numbers returned account for an empty Line") {
 //// If the first line of the paragraph is empty, and the word being searched for
 //// is on the second line, the vector returned should be: [2]
-//}
-//
+	auto paragraph=Paragraph();
+	auto line1 = Line{""};
+	auto line2 = Line{"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."};   
+	paragraph.addLine(line1);
+	paragraph.addLine(line2);
+	CHECK((std::get<1>(paragraph.contains(Word{"fool"})))[0]==2);
+}
+
 //// Integration test - both Paragraph and File Reader are tested together
-//TEST_CASE("File can be read into Paragraph and successfully searched") {
-//	// make sure that alice.txt is in the right location for this to work!
-//	// it must be in the same directory as the executable
-//	auto filereader = FileReader{"alice.txt"};
-//	auto paragraph = Paragraph{};
-//	filereader.readFileInto(paragraph);
-//
-//	auto[found, line_numbers] = paragraph.contains(Word{"Daddy"});
-//
-//	CHECK(found);
-//	CHECK(vector<int>{1,4,6} == line_numbers);
-//}
+TEST_CASE("File can be read into Paragraph and successfully searched") {
+	// make sure that alice.txt is in the right location for this to work!
+	// it must be in the same directory as the executable
+	auto filereader = FileReader{"alice.txt"};
+	auto paragraph = Paragraph{};
+	filereader.readFileInto(paragraph);
+
+	auto[found, line_numbers] = paragraph.contains(Word{"Daddy"});
+
+	CHECK(found);
+	CHECK(vector<int>{1,4,6} == line_numbers);
+}
