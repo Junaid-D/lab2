@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="TestProj" Version="10.0.0" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <VirtualDirectory Name="text-query-system">
     <File Name="Line.h"/>
     <File Name="Line.cpp"/>
@@ -23,6 +28,7 @@
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
         <IncludePath Value="E:\IE_3\soft\doctest-1.2.9\doctest-1.2.9\doctest"/>
+        <IncludePath Value="C:\Users\AgentX\Google Drive\2018\Semester 2\ELEN3009 Software Dev 2\Labs\doctest-1.2.9\doctest"/>
       </Compiler>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
