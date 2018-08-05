@@ -1,0 +1,1 @@
+./Debug/text-query-system_Word.cpp.o ./Debug/text-query-system_FileReader.cpp.o ./Debug/text-query-system_Line.cpp.o ./Debug/text-query-system_Paragraph.cpp.o ./Debug/text-query-system_main.cpp.o   

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Lab2" Database="" Version="10.0.0">
-  <Project Name="TestProj" Path="text-query-system/WordTest.project" Active="Yes"/>
+  <Project Name="TestProj" Path="text-query-system/WordTest.project" Active="No"/>
   <Project Name="Factorial" Path="factorial/Factorial.project" Active="No"/>
+  <Project Name="ClientProj" Path="text-query-system/ClientProj.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="TestProj" ConfigName="Debug"/>
       <Project Name="Factorial" ConfigName="Debug"/>
+      <Project Name="ClientProj" ConfigName="Debug"/>
+      <Project Name="ClientProj" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="TestProj" ConfigName="Release"/>
       <Project Name="Factorial" ConfigName="Release"/>
+      <Project Name="ClientProj" ConfigName="Release"/>
+      <Project Name="ClientProj" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
